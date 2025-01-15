@@ -16,8 +16,11 @@ body {
 
 nav {
   border: black solid 3px;
-  background-color: #e5e5e5;
-  text-align: center;
+  background-color: hsl(0, 0%, 90%);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {

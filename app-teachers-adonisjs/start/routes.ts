@@ -1,12 +1,11 @@
 /*
 |--------------------------------------------------------------------------
-| Routes file
+| Le fichier des routes
 |--------------------------------------------------------------------------
 |
-| The routes file is used for defining the HTTP routes.
+| Le fichier des routes a pour but de définir toutes les routes HTTP.
 |
 */
-
+import TeachersController from '#controllers/teachers_controller'
 import router from '@adonisjs/core/services/router'
-
-router.on('/').render('pages/home')
+router.get('/', [TeachersController, 'index']).as('home')
