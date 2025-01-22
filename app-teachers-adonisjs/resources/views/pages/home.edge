@@ -27,9 +27,7 @@
                             {{ teacher.nickname }}
                         </td>
                         <td class="containerOptions">
-                            <a href="#">
-                                <img height="20em" src="./img/edit.png" alt="edit" />
-                            </a>
+                            <a href="{{ route('teacher.edit', {id: teacher.id}) }}"> <img height="20em" src="/img/edit.png" alt="edit" /></a>
                             <a
                                 onClick="return confirm(`Voulez-vous vraiment supprimer l'enseignant {{ teacher.lastname }} {{ teacher.firstname }} ?`)"
                                 href="{{ route('teacher.destroy', {id: teacher.id}) }}"

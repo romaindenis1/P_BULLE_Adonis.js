@@ -56,7 +56,7 @@ export default class TeachersController {
     // Récupération des sections triées par le nom
     const sections = await Section.query().orderBy('name', 'asc')
     // Afficher la vue
-    return view.render('pages/teachers/edit.edge', {
+    return view.render('pages/edit.edge', {
       title: 'Modifier un enseignant',
       teacher,
       sections,
@@ -77,7 +77,7 @@ export default class TeachersController {
       await teacher.merge({ gender, firstname, lastname, nickname, origine, sectionId }).save()
     }
     // Afficher un message à l'utilisateur
-    session.flash('success', "L'enseignant a été mis à jour avec succès !")
+    session.flash('success', "L'enseignant a été mis à jour avec succès!")
     // Redirige l'utilisateur sur la home
     return response.redirect().toRoute('home')
   }
